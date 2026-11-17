@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Eventos · ITC 15 Años</title>
+  <meta name="description" content="Torneos de videojuegos y fútbol, hackathon de 48 horas, dinámicas y agenda de la celebración del 1 y 2 de diciembre.">
+  <link rel="icon" href="media/logo-15.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Chakra+Petch:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/secciones.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-uv" src="media/logo-uv-emblema.png" alt="Universidad Veracruzana"><span class="brand-div"></span><img class="brand-15" src="media/logo-15.png" alt=""> <span class="brand-txt">ITC 15 años</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu"><span></span>Menú</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carrera.html">La carrera</a></li>
+      <li><a href="eventos.html" aria-current="page">Eventos</a></li>
+      <li><a href="carteles.html">Carteles</a></li>
+      <li><a href="fotos.html">Fotos</a></li>
+      <li><a href="contacto.html">Colabora</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Eventos · 1 y 2 de diciembre</span>
+    <h1>Dos días para celebrar</h1>
+    <p>Tres torneos y seis actividades más, todas elegidas por la comunidad en la votación.</p>
+    <div class="cta-row"><a class="btn btn-primary" href="carteles.html">Ver los carteles</a><a class="btn btn-ghost" href="#agenda">Ver la agenda</a></div>
+  </div>
+</header>
+
+<section class="band events-band" id="eventos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Los torneos</span>
+      <h2>Tres torneos, tres formas de competir</h2>
+      <p>Videojuegos, fútbol y un hackathon de 48 horas, cada uno con su propia escena.</p>
+    </div>
+
+    <article class="event">
+      <div class="event-copy">
+        <span class="eyebrow">Torneo · Gaming</span>
+        <h3>Torneo de videojuegos</h3>
+        <span class="rank-chip"><b>1.º</b> más votado · 70 votos</span>
+        <p>La actividad favorita de la comunidad, y por mucho. Eliminatorias, final y toda la barra de las generaciones.</p>
+        <div class="event-facts"><span><b>Cuándo:</b> 1 y 2 de diciembre</span><span><b>Juegos y formato:</b> en su cartel</span></div>
+      </div>
+      <div class="stage stage-game" role="img" aria-label="Jugadores en una arena de videojuegos con efectos futuristas">
+        <div class="slides"><img src="media/gaming1.jpg" alt=""><img src="media/gaming2.jpg" alt=""></div>
+        <div class="tint"></div>
+        <div class="shade"></div>
+        <div class="scan"></div>
+        <div class="reticle" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none" stroke="var(--neon-g)" stroke-width="1.6">
+            <circle cx="50" cy="50" r="30" stroke-dasharray="14 8"/>
+            <circle cx="50" cy="50" r="3" fill="var(--neon-g)"/>
+            <path d="M50 8v14M50 78v14M8 50h14M78 50h14"/>
+          </svg>
+        </div>
+        <div class="hud">
+          <div class="hud-top"><span>P1 · ITC<div class="bar"></div></span><span>Score <span id="score">015000</span></span></div>
+          <div class="hud-center"><span class="lvl">LEVEL 15</span><span class="sub">1 y 2 de diciembre</span></div>
+          <div class="hud-bot"><span>2011 → 2026</span><span>Arena ITC</span></div>
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="event flip">
+      <div class="event-copy">
+        <span class="eyebrow">Torneo · Deportes</span>
+        <h3>Torneo de fútbol</h3>
+        <span class="rank-chip"><b>3.º</b> más votado · 22 votos</span>
+        <p>Equipos de todas las generaciones por la Copa 15 años. Para competir, hacer barra y reencontrarse.</p>
+        <div class="event-facts"><span><b>Cuándo:</b> 1 y 2 de diciembre</span><span><b>Modalidad y equipos:</b> en su cartel</span></div>
+        <div class="hint hint-row"><span>¿Te lo perdiste? Mira el gol otra vez desde el inicio.</span><button class="btn btn-ghost btn-sm" id="golReplay" type="button">↻ Repetir jugada</button></div>
+      </div>
+      <div class="stage stage-sport" id="stageGol" role="img" aria-label="Animación: un jugador patea el balón en un estadio, la pelota entra al arco y el marcador pasa a 15">
+        <canvas aria-hidden="true"></canvas>
+        <div class="gol" id="golText" aria-hidden="true"><span>¡GOOOL!</span><small>Torneo Aniversario · ITC 15</small></div>
+        <div class="scorebug"><span class="sb-a">ITC</span><span class="sb-s"><span><b id="scoreA">14</b> - 0</span></span><span class="sb-b">ANIV</span><span class="sb-t" id="clock">88:12</span></div>
+        <span class="live">EN VIVO</span>
+        <div class="lower"><div><b>Final · Copa 15 años</b>Cancha principal ITC</div></div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-copy">
+        <span class="eyebrow">Torneo · Innovación</span>
+        <h3>Hackathon ITC 15</h3>
+        <span class="rank-chip"><b>8.º</b> más votado · 6 votos</span>
+        <p>48 horas para resolver un reto con código, en equipo y contra el reloj. Puedes usar <strong>inteligencia artificial sin restricciones</strong>.</p>
+        <div class="event-facts"><span><b>Duración:</b> 48 horas</span><span><b>IA:</b> permitida, sin restricciones</span><span><b>Lenguaje:</b> el que elijas</span></div>
+        <div class="langs" id="langChips" role="group" aria-label="Elige el lenguaje que se escribe en la terminal"></div>
+      </div>
+      <div class="stage stage-code" role="img" aria-label="Participantes programando mientras aparece código en varios lenguajes">
+        <img class="cam-hack" src="media/hack.jpg" alt="">
+        <div class="tint"></div>
+        <div class="shade"></div>
+        <div class="flash-g"></div>
+        <div class="floaters" id="floaters"></div>
+        <div class="works">¡FUNCIONA!<small>15/15 tests ✓</small></div>
+        <div class="timer">TIEMPO RESTANTE <b id="hackTimer">47:59:59</b></div>
+        <div class="term">
+          <div class="term-bar"><i></i><i></i><i></i><span class="term-file" id="termFile">equipo_ia.py</span><span class="term-lang" id="termLang">Python + IA</span></div>
+          <pre id="code" aria-hidden="true"></pre>
+          <div class="build" id="build"><span id="buildTxt">Compilando…</span><span class="pbar"><i></i></span><span id="tests">0/15 tests</span></div>
+        </div>
+      </div>
+    </article>
+    <p class="note">Fotos de referencia de Unsplash (uso libre). Reemplazar por fotos del ITC.</p>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Torneo de videojuegos</span><span>Torneo de fútbol</span><span>Memorama</span><span>Lotería temática</span><span>Mesa de regalos</span><span>Juego con harina</span><span>Hackathon</span><span>Cabina de fotos</span><span>Carrera de cartones</span>
+    <span>Torneo de videojuegos</span><span>Torneo de fútbol</span><span>Memorama</span><span>Lotería temática</span><span>Mesa de regalos</span><span>Juego con harina</span><span>Hackathon</span><span>Cabina de fotos</span><span>Carrera de cartones</span>
+  </div>
+</div>
+
+<section class="band agenda" id="agenda">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Agenda</span>
+      <h2>Dos días de celebración</h2>
+      <p>La celebración dura dos días. El hackathon corre de principio a fin y las demás actividades se reparten entre el martes y el miércoles.</p>
+    </div>
+    <div class="sched">
+      <div class="sched-day d1"><span>Día 1</span><b>Martes 1 de diciembre</b></div>
+      <div class="sched-day d2"><span>Día 2</span><b>Miércoles 2 de diciembre</b></div>
+      <div class="sched-full">
+        <div class="sched-bar"><b>Hackathon</b><span>48 horas continuas · IA sin restricciones</span></div>
+      </div>
+      <div class="sched-full">
+        <h3>Más actividades</h3>
+        <ul class="sched-chips">
+          <li>Torneo de videojuegos</li>
+          <li>Torneo de fútbol</li>
+          <li>Memorama</li>
+          <li>Lotería temática</li>
+          <li>Mesa de regalos</li>
+          <li>Juego con harina</li>
+          <li>Cabina de fotos</li>
+          <li>Carrera de cartones</li>
+        </ul>
+        <p class="note">El día y la hora de cada actividad se publican en su cartel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap" style="align-items:center">
+    <div class="foot-brand"><img src="media/logo-15.png" alt="Logo del 15 aniversario ITC" style="border-radius:50%"><img src="media/logo-uv.png" alt="Universidad Veracruzana"><span>Ingeniería en Tecnologías Computacionales · FIEC Poza Rica<br>15 años · 2011–2026 · 1 y 2 de diciembre</span></div>
+    <span><span data-actualizado>Actualizado: 16 de noviembre de 2026</span> · <a href="https://www.uv.mx/ofertaeducativa/ingenieria-en-tecnologias-computacionales/" target="_blank" rel="noopener">Página oficial de la carrera</a> · Logo UV: Wikimedia Commons (CC BY-SA 4.0)</span>
+  </div>
+</footer>
+
+<script src="js/comun.js"></script>
+<script src="js/gol.js"></script>
+<script src="js/torneos.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Colabora · ITC 15 Años</title>
+  <meta name="description" content="Inscripciones para la celebración de los 15 años del ITC y contacto para colaborar.">
+  <link rel="icon" href="media/logo-15.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Chakra+Petch:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/secciones.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-uv" src="media/logo-uv-emblema.png" alt="Universidad Veracruzana"><span class="brand-div"></span><img class="brand-15" src="media/logo-15.png" alt=""> <span class="brand-txt">ITC 15 años</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu"><span></span>Menú</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carrera.html">La carrera</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="carteles.html">Carteles</a></li>
+      <li><a href="fotos.html">Fotos</a></li>
+      <li><a href="contacto.html" aria-current="page">Colabora</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Colabora</span>
+    <h1>Súmate a los 15 años</h1>
+    <p>Las inscripciones abren pronto. Si quieres ayudar a organizar la celebración o compartir fotos, escríbenos.</p>
+  </div>
+</header>
+
+<section class="band signup" id="inscripcion">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0">
+      <span class="eyebrow">Inscripción</span>
+      <h2>Inscripciones a las <span class="grad">actividades</span></h2>
+      <p>Las inscripciones todavía no abren. Muy pronto podrás reservar tu lugar aquí mismo.</p>
+    </div>
+    <form id="form" class="is-soon" novalidate aria-describedby="formSoon">
+      <span class="soon" id="formSoon">Próximamente</span>
+      <fieldset disabled>
+        <div class="field"><label for="f-nombre">Nombre completo</label><input id="f-nombre" type="text" placeholder="Ej. Ana Torres"></div>
+        <div class="field"><label for="f-correo">Correo</label><input id="f-correo" type="email" placeholder="nombre@correo.com"></div>
+        <div class="field"><label for="f-gen">Generación</label>
+          <select id="f-gen">
+            <option>2026</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>Otra generación o egresado</option>
+            <option>Docente o personal</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-evento">Actividad</label>
+          <select id="f-evento">
+            <option>Torneo de videojuegos</option>
+            <option>Torneo de fútbol</option>
+            <option>Hackathon</option>
+            <option>Carrera de cartones</option>
+            <option>Lotería y memorama</option>
+            <option>Solo voy a la celebración</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Inscripciones próximamente</button>
+      </fieldset>
+    </form>
+  </div>
+</section>
+
+<section class="band contact" id="contacto">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Colabora</span>
+      <h2>¿Quieres sumarte a la celebración?</h2>
+      <p>Si te interesa ser colaborador de los 15 años del ITC, escríbenos. Toda ayuda suma.</p>
+      <p>¿Tienes fotos de estos quince años? Compártelas para sumarlas a la <a href="fotos.html">galería</a>.</p>
+    </div>
+    <div class="contact-card">
+      <span class="k">Contacto</span>
+      <b>Juan Daniel Benitez Ordoñez</b>
+      <span class="contact-mail" id="contactMail">zs24006915@estudiantes.uv.mx</span>
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-sm" href="mailto:zs24006915@estudiantes.uv.mx?subject=Colaboraci%C3%B3n%2015%20a%C3%B1os%20ITC">Escribir un correo</a>
+        <button class="btn btn-ghost btn-sm" id="copyMail" type="button">Copiar correo</button>
+      </div>
+      <span class="status-msg" id="copyMsg" role="status"></span>
+      <p class="source">¿Buscas información para estudiar la carrera? Consulta la <a href="https://www.uv.mx/ofertaeducativa/ingenieria-en-tecnologias-computacionales/" target="_blank" rel="noopener">página oficial de la Universidad Veracruzana</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap" style="align-items:center">
+    <div class="foot-brand"><img src="media/logo-15.png" alt="Logo del 15 aniversario ITC" style="border-radius:50%"><img src="media/logo-uv.png" alt="Universidad Veracruzana"><span>Ingeniería en Tecnologías Computacionales · FIEC Poza Rica<br>15 años · 2011–2026 · 1 y 2 de diciembre</span></div>
+    <span><span data-actualizado>Actualizado: 16 de noviembre de 2026</span> · <a href="https://www.uv.mx/ofertaeducativa/ingenieria-en-tecnologias-computacionales/" target="_blank" rel="noopener">Página oficial de la carrera</a> · Logo UV: Wikimedia Commons (CC BY-SA 4.0)</span>
+  </div>
+</footer>
+
+<script src="js/comun.js"></script>
+<script src="js/contacto.js"></script>
+</body>
+</html>

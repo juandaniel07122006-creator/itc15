@@ -1,0 +1,16 @@
+# Archivos que NO se suben a GitHub (y por lo tanto no se publican).
+
+# Fotos originales de los 15 años. La página usa las copias de media/fotos.
+# Aquí está también la lista de asistencia con nombres y calificaciones, que no debe ser pública.
+media/lineaTiempo/
+
+# Piezas guardadas que todavía no se aprueban (la sección del torito).
+# Si se suben, cualquiera podría abrirlas con su dirección.
+pendiente/
+
+# Archivos que crean Windows, macOS y los editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+__pycache__/

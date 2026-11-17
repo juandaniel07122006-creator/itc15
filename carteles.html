@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carteles · ITC 15 Años</title>
+  <meta name="description" content="Carteles de las diez actividades de la celebración, con fecha, horario, lugar y precio.">
+  <link rel="icon" href="media/logo-15.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Chakra+Petch:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/secciones.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-uv" src="media/logo-uv-emblema.png" alt="Universidad Veracruzana"><span class="brand-div"></span><img class="brand-15" src="media/logo-15.png" alt=""> <span class="brand-txt">ITC 15 años</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu"><span></span>Menú</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carrera.html">La carrera</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="carteles.html" aria-current="page">Carteles</a></li>
+      <li><a href="fotos.html">Fotos</a></li>
+      <li><a href="contacto.html">Colabora</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Carteles</span>
+    <h1>Los detalles de cada actividad</h1>
+    <p>Cada actividad tiene su cartel con fecha, horario, lugar y precio. Toca un cartel para verlo completo.</p>
+  </div>
+</header>
+
+<section class="band carteles" id="carteles">
+  <div class="wrap">
+    <div class="cartel-grid" id="cartelGrid"></div>
+    <p class="note">Carteles provisionales. Los horarios, lugares y precios se publican aquí en cuanto se confirmen.</p>
+  </div>
+</section>
+
+<dialog class="cartel-dialog" id="cartelDialog" aria-labelledby="cdTitle">
+  <button class="cd-close" type="button" aria-label="Cerrar cartel">×</button>
+  <div class="cd-in">
+    <div class="cd-poster" id="cdPoster"></div>
+    <div class="cd-info">
+      <span class="rank-chip" id="cdRank"></span>
+      <h3 id="cdTitle"></h3>
+      <p id="cdText"></p>
+      <dl class="cd-facts" id="cdFacts"></dl>
+      <p class="note">Lo que aparece «por confirmar» se actualiza en este mismo cartel.</p>
+    </div>
+  </div>
+</dialog>
+</main>
+
+<footer>
+  <div class="wrap" style="align-items:center">
+    <div class="foot-brand"><img src="media/logo-15.png" alt="Logo del 15 aniversario ITC" style="border-radius:50%"><img src="media/logo-uv.png" alt="Universidad Veracruzana"><span>Ingeniería en Tecnologías Computacionales · FIEC Poza Rica<br>15 años · 2011–2026 · 1 y 2 de diciembre</span></div>
+    <span><span data-actualizado>Actualizado: 16 de noviembre de 2026</span> · <a href="https://www.uv.mx/ofertaeducativa/ingenieria-en-tecnologias-computacionales/" target="_blank" rel="noopener">Página oficial de la carrera</a> · Logo UV: Wikimedia Commons (CC BY-SA 4.0)</span>
+  </div>
+</footer>
+
+<script src="js/comun.js"></script>
+<script src="js/carteles.js"></script>
+</body>
+</html>
